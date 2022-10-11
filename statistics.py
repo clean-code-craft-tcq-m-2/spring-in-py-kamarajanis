@@ -1,3 +1,3 @@
 
 def calculateStats(numbers):
-  return None
+  return {"avg":sum(numbers)/len(numbers),"max":max(numbers),"min":min(numbers)}
