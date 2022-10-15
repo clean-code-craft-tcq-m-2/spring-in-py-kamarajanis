@@ -13,12 +13,12 @@ class LEDAlert:
 
 
 class StatsAlerter:
-  def __init__(self,maxThreshold,alertfunction):
+  def __init__(self,maxThreshold,alertobject):
     self.maxThershold=maxThreshold
-    self.alertfunction=alertfunction
+    self.alertobject=alertobject
 
   def checkAndAlert(self,numbers):
     self.numbers=numbers
     if max(self.numbers)>self.maxThershold:
-      self.alertfunction[0]=True
-      self.alertfunction[1]=True
+      self.alertobject[0].emailSent=True
+      self.alertobject[1].ledGlows=True
